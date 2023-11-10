@@ -7,6 +7,11 @@ import { redirect } from "next/navigation";
 import { useSession } from "next-auth/react";
 
 export default function Login() {
+	const { data: session } = useSession();
+	if(session?.user?.name){
+		redirect("/");
+	}
+
 	return (
 
 		<div className="relative py-16 bg-gradient-to-br from-sky-50 to-gray-200">

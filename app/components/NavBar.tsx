@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 import { signOut, useSession } from "next-auth/react";
-import nextSvg from "@/public/next.svg";
+import googleSvg from "@/public/google.svg";
 import Image from 'next/image'
 
 const NavBar = () => {
@@ -29,10 +29,10 @@ const NavBar = () => {
 						<label tabIndex={0} className="btn btn-ghost btn-circle avatar">
 							<div className="w-10 rounded-full">
 								{session?.user?.image ? (
-									<Image src={session?.user?.image} alt="User Image" />
+									<img src={session?.user?.image} alt="User Image"/>
 								): 
 								(
-									<Image src={nextSvg} alt="User Image" />
+									<Image src={googleSvg} alt="User Image" width={40} height={40}/>
 								)}
 							</div>
 						</label>
