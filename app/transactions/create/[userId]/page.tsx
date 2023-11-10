@@ -3,7 +3,7 @@
 import { createLog } from '@/app/transactions/actions'
 import Link from 'next/link'
 
-const CreatePage = async ({ params }: { params: { userId: string } }) => {
+const CreatePage = ({ params }: { params: { userId: string } }) => {
 	const types = ["CHECK-IN", "CHECK-OUT", "BREAK"]
 
 
@@ -38,6 +38,7 @@ const CreatePage = async ({ params }: { params: { userId: string } }) => {
 						className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
 						{types.map(type => (
 							<option
+								key={type}
 								defaultValue={type}>
 								{type}
 							</option>

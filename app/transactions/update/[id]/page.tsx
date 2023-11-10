@@ -40,6 +40,7 @@ const UpdatePage = async ({ params }: { params: { id: string } }) => {
 						name="type">
 						{types.map(type => (
 							<option
+								key={type}
 								defaultValue={type}
 								selected={type == transactionType}>
 								{type}
