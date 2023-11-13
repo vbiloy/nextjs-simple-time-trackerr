@@ -1,10 +1,9 @@
 import Link from 'next/link';
-import { LoginTransaction, User } from "@prisma/client";
 import DeleteButton from '@/app/transactions/components/DeleteButton';
 import { format } from 'date-fns'
 import { FaPencilAlt } from 'react-icons/fa'
 
-const TransactionItem = ({ id, remarks, transactionType, transactionDateTime, user }: LoginTransaction) => {
+const TransactionItem = ({ id, remarks, transactionType, transactionDateTime, user }: any) => {
 	return (
 		<tr className="hover:bg-gray-100 dark:hover:bg-gray-700">
 			<td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">{user.name}</td>
