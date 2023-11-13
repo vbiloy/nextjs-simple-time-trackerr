@@ -4,7 +4,7 @@ import { createLog } from '@/app/transactions/actions'
 import Link from 'next/link'
 
 const CreatePage = ({ params }: { params: { userId: string } }) => {
-	const types = ["CHECK-IN", "CHECK-OUT", "BREAK"]
+	const types = ["CHECK_IN", "CHECK_OUT", "BREAK"]
 
 
 	return (

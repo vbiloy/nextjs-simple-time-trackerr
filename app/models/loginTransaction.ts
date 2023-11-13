@@ -7,7 +7,11 @@ export const getTransation = (id: string) => {
 }
 
 export const getTransations = () => {
-	const response = prisma.loginTransaction.findMany();
+	const response = prisma.loginTransaction.findMany({
+		include: {
+			user: true,
+		},
+	});
 
 	return response
 }

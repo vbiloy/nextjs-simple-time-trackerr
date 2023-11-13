@@ -15,7 +15,7 @@ const UserItem = ({ id, name, email, role, title, status }: User) => {
 			<td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{role}</td>
 			<td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">{title}</td>
 			<td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">
-				{status == 'CHECK-IN' ?
+				{status == 'CHECK_IN' ?
 					(<span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400">{status}</span>) :
 					status == 'BREAK' ?
 						(<span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">{status}</span>) : 

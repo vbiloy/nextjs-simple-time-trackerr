@@ -31,7 +31,7 @@ export const createUser = async (data: FormData) => {
 			password: password as string,
 			name: name as string,
 			title: title as string,
-			status: 'CHECK-IN',
+			status: 'CHECK_IN',
 			role: 'STAFF',
 		},
 	});
