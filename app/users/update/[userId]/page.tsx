@@ -1,6 +1,8 @@
 import { updateUser } from '@/app/users/actions'
 import { getUser } from '@/app/models/user'
 import Link from 'next/link'
+import SubmitButton from '@/app/components/SubmitButton'
+import { FaArrowLeft } from "react-icons/fa"
 
 const UpdatePage = async ({ params }: { params: { userId: string } }) => {
 	const user = await getUser(params.userId);
@@ -81,14 +83,10 @@ const UpdatePage = async ({ params }: { params: { userId: string } }) => {
 					type="button"
 				>
 					<Link href={`/users`}>
-						Back
+						<FaArrowLeft size={20} /> 
 					</Link>
 				</button>
-				<button
-					type="submit"
-					className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-				>Save Changes
-				</button>
+				<SubmitButton />
 			</form>
 		</>
 	);

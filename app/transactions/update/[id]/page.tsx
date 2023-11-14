@@ -1,7 +1,8 @@
 import { updateLog } from '@/app/transactions/actions'
 import { getTransation } from '@/app/models/loginTransaction'
-import { prisma } from "@/utils/db"
 import Link from 'next/link'
+import SubmitButton from '@/app/components/SubmitButton'
+import { FaArrowLeft } from "react-icons/fa"
 
 const UpdatePage = async ({ params }: { params: { id: string } }) => {
 	const transaction = await getTransation(params.id);
@@ -65,14 +66,10 @@ const UpdatePage = async ({ params }: { params: { id: string } }) => {
 					type="button"
 				>
 					<Link href={`/transactions`}>
-						Back
+						<FaArrowLeft size={20} /> 
 					</Link>
 				</button>
-				<button
-					className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-					type="submit"
-				>Save
-				</button>
+				<SubmitButton />
 			</form>
 		</>
 	);
