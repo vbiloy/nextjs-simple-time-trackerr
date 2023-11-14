@@ -17,7 +17,14 @@ export const getTransations = () => {
 }
 
 export const getTransationsByUserId = (userId: string) => {
-	const response = prisma.loginTransaction.findMany({ where: { userId: parseInt(userId) } });
+	const response = prisma.loginTransaction.findMany({ 
+		where: { 
+			userId: parseInt(userId) 
+		},
+		include: {
+			user: true,
+		},
+	});
 
 	return response
 }
